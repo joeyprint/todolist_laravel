@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('todolist');
-});
+Route::get('/', 'TodoListController@showList');
 
 Route::post('/', 'TodolistController@createList');
+
+Route::post('/del', 'TodolistController@deleteList');
